@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ElitePro Consulting | Экспертный бизнес-консалтинг</title>
+  <meta name="description" content="Профессиональный консалтинг: стратегия, рост, цифровизация. Запишитесь на бесплатную консультацию.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <div class="lang-switcher">
+    <button onclick="setLang('en')" class="lang-btn">EN</button>
+    <button onclick="setLang('ru')" class="lang-btn active">RU</button>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="assets/logo.png" alt="ElitePro Logo" height="50">
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link" data-en="Home" data-ru="Главная">Главная</a></li>
+        <li><a href="#services" class="nav-link" data-en="Services" data-ru="Услуги">Услуги</a></li>
+        <li><a href="#about" class="nav-link" data-en="About" data-ru="О нас">О нас</a></li>
+        <li><a href="#schedule" class="nav-link" data-en="Book Now" data-ru="Записаться">Записаться</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <h1 data-en="Transform Your Business with Expert Guidance" data-ru="Преобразуйте бизнес с экспертной поддержкой">
+        Преобразуйте бизнес с экспертной поддержкой
+      </h1>
+      <p class="subtitle" data-en="Strategic consulting for growth, efficiency, and innovation." data-ru="Стратегический консалтинг для роста, эффективности и инноваций.">
+        Стратегический консалтинг для роста, эффективности и инноваций.
+      </p>
+      <a href="#schedule" class="btn-primary" data-en="Schedule Free Consultation" data-ru="Записаться на консультацию">
+        Записаться на консультацию
+      </a>
+    </div>
+    <div class="hero-image">
+      <img src="assets/hero-bg.jpg" alt="Business Growth">
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2 class="section-title" data-en="Our Services" data-ru="Наши услуги">Наши услуги</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">Strategy</div>
+          <h3 data-en="Business Strategy" data-ru="Бизнес-стратегия">Бизнес-стратегия</h3>
+          <p data-en="Develop winning strategies to scale operations and dominate markets." data-ru="Разрабатываем стратегии для масштабирования и лидерства на рынке.">
+            Разрабатываем стратегии для масштабирования и лидерства на рынке.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="icon">Growth</div>
+          <h3 data-en="Growth Marketing" data-ru="Маркетинг роста">Маркетинг роста</h3>
+          <p data-en="Data-driven campaigns to acquire and retain high-value clients." data-ru="Кампании на основе данных для привлечения и удержания клиентов.">
+            Кампании на основе данных для привлечения и удержания клиентов.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="icon">Tech</div>
+          <h3 data-en="Digital Transformation" data-ru="Цифровая трансформация">Цифровая трансформация</h3>
+          <p data-en="Modernize systems with AI, cloud, and automation." data-ru="Модернизация с ИИ, облаком и автоматизацией.">
+            Модернизация с ИИ, облаком и автоматизацией.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section bg-light">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h2 data-en="Why Choose ElitePro?" data-ru="Почему ElitePro?">Почему ElitePro?</h2>
+        <p data-en="We combine <strong>20+ years of industry expertise</strong> with cutting-edge methodologies to deliver measurable results." data-ru="Мы объединяем <strong>20+ лет опыта</strong> с передовыми методами для измеримых результатов.">
+          Мы объединяем <strong>20+ лет опыта</strong> с передовыми методами для измеримых результатов.
+        </p>
+        <ul class="checklist">
+          <li data-en="Proven track record with Fortune 500 clients" data-ru="Опыт с клиентами Fortune 500">Опыт с клиентами Fortune 500</li>
+          <li data-en="Tailored solutions, never templates" data-ru="Индивидуальные решения, без шаблонов">Индивидуальные решения, без шаблонов</li>
+          <li data-en="100% satisfaction guarantee" data-ru="Гарантия 100% удовлетворенности">Гарантия 100% удовлетворенности</li>
+          <li data-en="Flexible scheduling around your calendar" data-ru="Гибкий график под ваш календарь">Гибкий график под ваш календарь</li>
+        </ul>
+        <a href="#schedule" class="btn-outline" data-en="Get Started" data-ru="Начать">Начать</a>
+      </div>
+      <div class="about-team">
+        <img src="assets/consultant1.jpg" alt="Consultant 1" class="team-img">
+        <img src="assets/consultant2.jpg" alt="Consultant 2" class="team-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="schedule" class="section">
+    <div class="container schedule-container">
+      <h2 data-en="Request a Consultation" data-ru="Заказать консультацию">Заказать консультацию</h2>
+      <p class="text-center" data-en="Fill out the form. Our manager will contact you within 24 hours." data-ru="Заполните форму. Менеджер свяжется с вами в течение 24 часов.">
+        Заполните форму. Менеджер свяжется с вами в течение 24 часов.
+      </p>
+
+      <form id="consultation-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name" data-en="Full Name *" data-ru="ФИО *">ФИО *</label>
+          <input type="text" id="name" name="name" required placeholder="Иван Иванов">
+        </div>
+
+        <div class="form-group">
+          <label for="email" data-en="Email *" data-ru="Email *">Email *</label>
+          <input type="email" id="email" name="email" required placeholder="ivan@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone" data-en="Phone (optional)" data-ru="Телефон (по желанию)">Телефон (по желанию)</label>
+          <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67">
+        </div>
+
+        <div class="form-group">
+          <label for="company" data-en="Company" data-ru="Компания">Компания</label>
+          <input type="text" id="company" name="company" placeholder="ООО Ромашка">
+        </div>
+
+        <div class="form-group">
+          <label for="service" data-en="Service" data-ru="Услуга">Услуга</label>
+          <select id="service" name="service">
+            <option value="" data-en="Select" data-ru="Выберите">Выберите</option>
+            <option value="Business Strategy" data-en="Business Strategy" data-ru="Бизнес-стратегия">Бизнес-стратегия</option>
+            <option value="Growth Marketing" data-en="Growth Marketing" data-ru="Маркетинг роста">Маркетинг роста</option>
+            <option value="Digital Transformation" data-en="Digital Transformation" data-ru="Цифровая трансформация">Цифровая трансформация</option>
+            <option value="Other" data-en="Other" data-ru="Другое">Другое</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="preferred-time" data-en="Preferred Time" data-ru="Желаемое время">Желаемое время</label>
+          <input type="text" id="preferred-time" name="preferred-time" placeholder="вт 14:00–16:00">
+        </div>
+
+        <div class="form-group">
+          <label for="message" data-en="Message" data-ru="Сообщение">Сообщение</label>
+          <textarea id="message" name="message" rows="4" placeholder="Расскажите о ваших целях..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" data-en="Submit" data-ru="Отправить">Отправить</button>
+        <p class="form-status" id="form-status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logo.png" alt="Logo" height="40" class="footer-logo">
+        <p data-en="Expert consulting for ambitious leaders." data-ru="Экспертный консалтинг для амбициозных лидеров.">
+          Экспертный консалтинг для амбициозных лидеров.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="#home" data-en="Home" data-ru="Главная">Главная</a>
+        <a href="#services" data-en="Services" data-ru="Услуги">Услуги</a>
+        <a href="#about" data-en="About" data-ru="О нас">О нас</a>
+        <a href="#schedule" data-en="Book" data-ru="Запись">Запись</a>
+      </div>
+      <div>
+        <p><strong data-en="Email:" data-ru="Email:">Email:</strong> manager@eufrasia.ru</p>
+        <p><strong data-en="Phone:" data-ru="Телефон:">Телефон:</strong> +7 (999) 123-45-67</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 ElitePro Consulting. <span data-en="All rights reserved." data-ru="Все права защищены.">Все права защищены.</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
