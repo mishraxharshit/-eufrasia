@@ -22,32 +22,42 @@ function setLang(newLang) {
   document.documentElement.lang = lang;
   localStorage.setItem('lang', lang);
 
+  // Update text
   document.querySelectorAll('[data-en]').forEach(el => {
     el.textContent = el.getAttribute(`data-${lang}`);
   });
 
-  document.querySelectorAll('[data-en-placeholder]').forEach(el => {
+  // Update placeholders
+  const placeholders = {
+    en: { name: "John Doe", phone: "+1 (555) 123-4567", company: "Acme Corp", preferred: "e.g. Tuesday 2–4 PM", message: "Tell us about your goals..." },
+    ru: { name: "Иван Иванов", phone: "+7 (999) 123-45-67", company: "ООО Ромашка", preferred: "вт 14:00–16:00", message: "Расскажите о ваших целях..." }
+  };
+  document.querySelectorAll('input, textarea').forEach(el => {
     const key = el.id;
-    const placeholders = {
-      en: { name: "John Doe", phone: "+1 (555) 123-4567", company: "Acme Corp", preferred: "e.g. Tuesday 2–4 PM", message: "Tell us about your goals..." },
-      ru: { name: "Иван Иванов", phone: "+7 (999) 123-45-67", company: "ООО Ромашка", preferred: "вт 14:00–16:00", message: "Расскажите о ваших целях..." }
-    };
-    if (placeholders[lang][key] !== undefined) el.placeholder = placeholders[lang][key];
+    if (placeholders[lang][key]) el.placeholder = placeholders[lang][key];
   });
 
+  // Language buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.textContent.trim() === lang.toUpperCase());
+  });
+
+  // Service content
+  document.querySelectorAll('.service-lang').forEach(container => {
+    container.querySelectorAll('.lang').forEach(div => {
+      div.classList.toggle('active', div.classList.contains(lang));
+    });
   });
 }
 
 setLang(lang);
 
-// Form Submission
+// Silent Form Submission (AJAX for SilentForms)
 const form = document.getElementById('consultation-form');
 const status = document.getElementById('form-status');
 
 form.addEventListener('submit', async function(e) {
-  e.preventDefault();
+  e.preventDefault();  // Silent: No page reload
   status.textContent = lang === 'ru' ? 'Отправка...' : 'Sending...';
   status.className = 'form-status';
 
