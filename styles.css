@@ -96,7 +96,24 @@ h4 { font-size: 1.25rem; margin-bottom: 0.5rem; }
 .footer-links a { color: #ccc; text-decoration: none; display: block; margin: 0.5rem 0; }
 .footer-links a:hover { color: white; }
 .footer-bottom { text-align: center; padding-top: 1rem; border-top: 1px solid #333; font-size: 0.9rem; }
+/* Barcode Styling */
+.barcode-img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 12px auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 8px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
+.footer-barcode {
+  max-width: 150px;
+  margin-top: 8px;
+}
 /* Language Switcher */
 .lang-switcher { position: fixed; top: 20px; right: 20px; z-index: 1001; background: white; padding: 8px; border-radius: 50px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
 .lang-btn { background: none; border: none; padding: 8px 12px; font-weight: 600; cursor: pointer; border-radius: 50px; transition: 0.3s; }
