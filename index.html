@@ -67,7 +67,7 @@
 
         <!-- Service 1 -->
         <div class="service-card">
-          <div class="icon">Globe</div>
+          <div class="icon">🌐</div>
           <h3 data-en="Eurasia–Africa Strategic Consultation" data-ru="Геоэкономическая стратегия Евразия–Африка">
             Геоэкономическая стратегия Евразия–Африка
           </h3>
@@ -101,7 +101,7 @@
 
         <!-- Service 2 -->
         <div class="service-card">
-          <div class="icon">Briefcase</div>
+          <div class="icon">💼</div>
           <h3 data-en="Investment, Trade &amp; Partnership Consulting" data-ru="Инвестиции, торговля и партнёрства">
             Инвестиции, торговля и партнёрства
           </h3>
@@ -135,7 +135,7 @@
 
         <!-- Service 3 -->
         <div class="service-card">
-          <div class="icon">Building</div>
+          <div class="icon">🏢</div>
           <h3 data-en="Residence, Wealth &amp; Education Advisory" data-ru="Резидентство, капитал и образование">
             Резидентство, капитал и образование
           </h3>
@@ -169,7 +169,7 @@
 
         <!-- Service 4 -->
         <div class="service-card">
-          <div class="icon">Shield</div>
+          <div class="icon">🛡️</div>
           <h3 data-en="Security, Defence &amp; Strategic Technologies" data-ru="Безопасность, оборона и стратегические технологии">
             Безопасность, оборона и стратегические технологии
           </h3>
@@ -326,7 +326,7 @@
     </div>
   </section>
 
-  <!-- Contact Form -->
+  <!-- Contact Form - GOOGLE FORMS -->
   <section id="schedule" class="section">
     <div class="container schedule-container">
       <h2 data-en="Request a Consultation" data-ru="Заказать консультацию">Заказать консультацию</h2>
@@ -334,44 +334,23 @@
         Заполните форму. Менеджер свяжется с вами в течение 24 часов.
       </p>
 
-      <form id="consultation-form" action="https://silentforms.com/f/YOUR_SILENTFORMS_ID" method="POST" class="contact-form">
-        <div class="form-group">
-          <label for="name" data-en="Full Name *" data-ru="ФИО *">ФИО *</label>
-          <input type="text" id="name" name="name" required placeholder="Иван Иванов">
-        </div>
-        <div class="form-group">
-          <label for="email" data-en="Email *" data-ru="Email *">Email *</label>
-          <input type="email" id="email" name="email" required placeholder="ivan@example.com">
-        </div>
-        <div class="form-group">
-          <label for="phone" data-en="Phone (optional)" data-ru="Телефон (по желанию)">Телефон (по желанию)</label>
-          <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67">
-        </div>
-        <div class="form-group">
-          <label for="company" data-en="Company" data-ru="Компания">Компания</label>
-          <input type="text" id="company" name="company" placeholder="ООО Ромашка">
-        </div>
-        <div class="form-group">
-          <label for="service" data-en="Service" data-ru="Услуга">Услуга</label>
-          <select id="service" name="service">
-            <option value="" data-en="Select" data-ru="Выберите">Выберите</option>
-            <option value="Eurasia–Africa Strategy" data-en="Eurasia–Africa Strategy" data-ru="Геоэкономика Евразия–Африка">Геоэкономика Евразия–Африка</option>
-            <option value="Investment & Trade" data-en="Investment & Trade" data-ru="Инвестиции и торговля">Инвестиции и торговля</option>
-            <option value="Residence & Wealth" data-en="Residence & Wealth" data-ru="Резидентство и капитал">Резидентство и капитал</option>
-            <option value="Security & Defence" data-en="Security & Defence" data-ru="Безопасность и оборона">Безопасность и оборона</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="preferred-time" data-en="Preferred Time" data-ru="Желаемое время">Желаемое время</label>
-          <input type="text" id="preferred-time" name="preferred-time" placeholder="вт 14:00–16:00">
-        </div>
-        <div class="form-group">
-          <label for="message" data-en="Message" data-ru="Сообщение">Сообщение</label>
-          <textarea id="message" name="message" rows="4" placeholder="Расскажите о ваших целях..."></textarea>
-        </div>
-        <button type="submit" class="btn-primary" data-en="Submit" data-ru="Отправить">Отправить</button>
-        <p class="form-status" id="form-status"></p>
-      </form>
+      <!-- GOOGLE FORMS EMBED -->
+      <div class="contact-form">
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfrlh0b2PgHXb6sMCTbGhBxS6p2J02AjWsjrEuzemYpxzYQMw/viewform?usp=dialog" 
+          width="100%" 
+          height="900" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0"
+          style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);"
+        >Loading…</iframe>
+      </div>
+
+      <!-- Optional: Success Message -->
+      <p class="form-status success" style="display:none; text-align:center; margin-top:1rem;" id="thank-you">
+        Спасибо! Мы свяжемся с вами в ближайшее время.
+      </p>
     </div>
   </section>
 
