@@ -334,25 +334,91 @@
         Заполните форму. Менеджер свяжется с вами в течение 24 часов.
       </p>
 
-      <!-- YANDEX FORMS EMBED (YOUR REAL CODE) -->
-      <div class="contact-form">
-        <script src="https://forms.yandex.ru/_static/embed.js"></script>
-        <iframe 
-          src="https://forms.yandex.ru/u/690b883549af4755eae76440?iframe=1" 
-          frameborder="0" 
-          name="ya-form-690b883549af4755eae76440" 
-          width="100%" 
-          height="900"
-          style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);"
-        >Loading…</iframe>
-      </div>
+      <!-- Contact Form - JOTFORM (100% CLEAN, NO BRANDING ANYWHERE) -->
+<section id="schedule" class="section">
+  <div class="container schedule-container">
+    <h2 data-en="Request a Consultation" data-ru="Заказать консультацию">Заказать консультацию</h2>
+    <p class="text-center" data-en="Fill out the form. Our manager will contact you within 24 hours." data-ru="Заполните форму. Менеджер свяжется с вами в течение 24 часов.">
+      Заполните форму. Менеджер свяжется с вами в течение 24 часов.
+    </p>
 
-      <!-- Optional: Thank You Message -->
-      <p class="form-status success" style="display:none; text-align:center; margin-top:1rem;" id="thank-you">
-        Спасибо! Мы свяжемся с вами в ближайшее время.
-      </p>
+    <!-- JOTFORM IFRAME + BRANDING KILLER -->
+    <div class="contact-form" style="position:relative; overflow:hidden; height:900px;">
+      <iframe
+        id="JotFormIFrame-253135434251045"
+        title="Eufrasia Consultation"
+        onload="window.parent.scrollTo(0,0)"
+        allowtransparency="true"
+        allow="geolocation; microphone; camera; fullscreen; payment"
+        src="https://form.jotform.com/253135434251045?nojump"
+        frameborder="0"
+        style="width:100%; height:100%; border:none; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.08);"
+        scrolling="no"
+      ></iframe>
+
+      <!-- BRANDING REMOVAL SCRIPT (Aggressive & Reliable) -->
+      <script>
+        (function() {
+          const iframeId = 'JotFormIFrame-253135434251045';
+          const iframe = document.getElementById(iframeId);
+          let attempts = 0;
+          const maxAttempts = 15;
+
+          const killBranding = () => {
+            try {
+              const doc = iframe.contentDocument || iframe.contentWindow.document;
+              if (!doc) return;
+
+              // KILL HEADER (Logo + "Create your own")
+              const header = doc.querySelector('.form-header-group, .header-logo, [class*="header"]');
+              if (header) header.style.cssText = 'display:none !important; height:0 !important;';
+
+              // KILL FOOTER (Powered by Jotform)
+              const footer = doc.querySelector('.form-footer, [class*="footer"], [id*="footer"]');
+              if (footer) footer.style.cssText = 'display:none !important; height:0 !important;';
+
+              // KILL ALL JOTFORM LINKS
+              doc.querySelectorAll('a[href*="jotform"], [href*="jotform.com"], .jf-branding, .form-all a').forEach(el => {
+                el.style.cssText = 'display:none !important; visibility:hidden !important;';
+              });
+
+              // KILL ANY REMAINING BRANDED ELEMENTS
+              doc.body.style.cssText += 'margin-top:0 !important; padding-top:0 !important;';
+
+              // SUCCESS: Stop trying
+              return true;
+            } catch (e) {
+              return false;
+            }
+          };
+
+          const tryKill = () => {
+            if (killBranding()) return;
+            if (attempts < maxAttempts) {
+              attempts++;
+              setTimeout(tryKill, 500);
+            }
+          };
+
+          iframe.onload = () => setTimeout(tryKill, 800);
+          setTimeout(tryKill, 1500);
+          setInterval(tryKill, 3000); // Final safety net
+        })();
+      </script>
+
+      <!-- Jotform Handler (Required) -->
+      <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+      <script>
+        window.jotformEmbedHandler("iframe[id='JotFormIFrame-253135434251045']", "https://form.jotform.com/");
+      </script>
     </div>
-  </section>
+
+    <!-- Thank You Message -->
+    <p class="form-status success" style="display:none; text-align:center; margin-top:1.5rem; font-weight:600; color:#1a3a6e;" id="thank-you">
+      Спасибо! Мы свяжемся с вами в ближайшее время.
+    </p>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="footer">
